@@ -1,0 +1,24 @@
+# 本地运行产物
+*.venv/
+venv/
+__pycache__/
+*.pyc
+.mypy_cache/
+
+# 用户的报告输出（含真实聊天数据，严禁提交）
+report.png
+report.html
+summary.md
+digest.md
+messages.json
+messages.txt
+facts.json
+insights.json
+report_spec.json
+run*/
+reports/
+out/
+
+# 系统文件
+.DS_Store
+Thumbs.db

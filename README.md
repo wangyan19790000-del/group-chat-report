@@ -59,6 +59,18 @@ python wechat-group-report/scripts/setup_env.py       # 个人微信版
 
 详细用法、参数说明见各目录内的 `SKILL.md` 与 `README.md`。
 
+## 对外分享前请脱敏
+
+报告默认包含成员真实昵称。两个 Skill 都自带脱敏脚本，分享报告图 / 演示数据前先跑一遍：
+
+```bash
+python scripts/anonymize_report.py --run-dir <报告目录> --prefix 老师 --group 示例项目群
+```
+
+- 成员按发言量自动编号为 `老师A / 老师B / …`（括号里的角色备注保留，数据不失真）
+- 消息正文里被提到的名字一并替换，映射表写入 `alias_map.json` 供复查
+- 产物输出到 `<报告目录>-anon/`，用其中的数据重新渲染即为脱敏版报告
+
 ## 目录结构
 
 ```
